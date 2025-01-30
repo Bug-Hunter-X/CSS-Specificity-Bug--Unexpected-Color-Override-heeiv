@@ -1,0 +1,30 @@
+The solution is to increase the specificity of the h1 selector to ensure it overrides the h1 em rule. Here are two ways to accomplish this:
+
+**Method 1: Using an ID selector:**
+
+```css
+#my-heading {
+  color: red;
+}
+
+#my-heading em {
+  color: blue;
+}
+```
+
+By adding an ID to the heading, we increase specificity. Now #my-heading will always override any rules for h1 em
+
+**Method 2: Using a more specific class selector:**
+```css
+.important-heading {
+  color: red;
+}
+
+.important-heading em {
+  color: blue;
+}
+```
+
+Adding a class makes the selector more specific, so it overrides the rule applied to only `em` elements inside `h1` tags.
+
+Choose either method based on the structure and needs of your HTML.
